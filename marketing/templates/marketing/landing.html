@@ -1,0 +1,391 @@
+{% extends 'base_marketing.html' %}
+{% load static %}
+
+{% block content %}
+<section id="hero" class="dronex-hero section-pad">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-7">
+        <div class="section-label">Command Center</div>
+        <h1 class="display-4 text-white fw-bold">DRONEX — Unified Drone Command Center</h1>
+        <p class="lead text-muted">Monitoreo, operación y coordinación táctica de drones en tiempo real para seguridad pública y privada.</p>
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <a href="#contacto" class="btn btn-primary btn-lg dronex-btn">Solicitar demo</a>
+          <a href="#contacto" class="btn btn-outline-light btn-lg dronex-btn-outline">Hablar con un especialista</a>
+        </div>
+        <div class="d-flex flex-wrap gap-2 mt-4">
+          <span class="badge dronex-badge">Secure by design</span>
+          <span class="badge dronex-badge">Audit-ready</span>
+          <span class="badge dronex-badge">Role-based access</span>
+          <span class="badge dronex-badge">Real-time telemetry</span>
+          <span class="badge dronex-badge">Multi-drone ops</span>
+        </div>
+      </div>
+      <div class="col-lg-5 mt-5 mt-lg-0">
+        <div class="hero-panel">
+          <div class="panel-header">Live Ops Snapshot</div>
+          <div class="panel-body">
+            <div class="hud-metric">
+              <span>Active Drones</span>
+              <strong>24</strong>
+            </div>
+            <div class="hud-metric">
+              <span>Incidents Detected</span>
+              <strong>03</strong>
+            </div>
+            <div class="hud-metric">
+              <span>Operational Zones</span>
+              <strong>11</strong>
+            </div>
+            <div class="hud-scan mt-4">
+              <div class="scan-node"></div>
+              <div class="scan-node"></div>
+              <div class="scan-node"></div>
+            </div>
+            <div class="panel-footer">Telemetry feed synchronized · 98.7% link integrity</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="solucion" class="section-pad">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-6" data-animate>
+        <h2 class="section-title">Problema → Solución</h2>
+        <ul class="list-unstyled dronex-list">
+          <li><span class="text-danger">Incidentes no detectados a tiempo</span></li>
+          <li><span class="text-danger">Coordinación deficiente entre operadores</span></li>
+          <li><span class="text-danger">Evidencia dispersa</span></li>
+          <li><span class="text-danger">Falta de trazabilidad y auditoría</span></li>
+        </ul>
+      </div>
+      <div class="col-lg-6" data-animate>
+        <div class="solution-card">
+          <h3 class="h5 text-white">DRONEX resuelve con</h3>
+          <ul class="list-unstyled dronex-list">
+            <li>Centro de mando unificado</li>
+            <li>Operación con turnos, rutas y alertas</li>
+            <li>Telemetría en vivo</li>
+            <li>Registro y auditoría por evento</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="beneficios" class="section-pad">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+      <h2 class="section-title">Beneficios clave</h2>
+      <div class="section-label">8-10 capacidades críticas</div>
+    </div>
+    <div class="row g-4">
+      {% for item in benefits %}
+      <div class="col-md-6 col-lg-4" data-animate>
+        <div class="benefit-card">
+          <div class="benefit-icon"><i class="fa-solid fa-satellite-dish"></i></div>
+          <p class="mb-0">{{ item }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="casos" class="section-pad">
+  <div class="container">
+    <h2 class="section-title">Casos de uso</h2>
+    <div class="row g-4 mt-2">
+      <div class="col-md-6 col-lg-4" data-animate>
+        <div class="use-card">
+          <div class="use-icon"><i class="fa-solid fa-badge-sheriff"></i></div>
+          <h3>Policía</h3>
+          <p>Patrullaje, respuesta a incidentes, búsqueda y rescate.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-animate>
+        <div class="use-card">
+          <div class="use-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>Seguridad privada</h3>
+          <p>Vigilancia perimetral, escoltas, eventos masivos.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-animate>
+        <div class="use-card">
+          <div class="use-icon"><i class="fa-solid fa-city"></i></div>
+          <h3>Gobierno / ciudad</h3>
+          <p>Tráfico, emergencias, control de aforo.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-animate>
+        <div class="use-card">
+          <div class="use-icon"><i class="fa-solid fa-anchor"></i></div>
+          <h3>Infraestructura crítica</h3>
+          <p>Puertos, aeropuertos, energía.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-animate>
+        <div class="use-card">
+          <div class="use-icon"><i class="fa-solid fa-industry"></i></div>
+          <h3>Industrial</h3>
+          <p>Minería, oil&amp;gas, inspecciones.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="section-pad">
+  <div class="container">
+    <h2 class="section-title">How it works</h2>
+    <div class="how-grid" data-animate>
+      <div class="how-step">
+        <div class="step-num">01</div>
+        <h3>Admin define flota, rutas y turnos</h3>
+      </div>
+      <div class="how-step">
+        <div class="step-num">02</div>
+        <h3>Piloto inicia operación desde DRONEX</h3>
+      </div>
+      <div class="how-step">
+        <div class="step-num">03</div>
+        <h3>Agente conecta drone y envía telemetría/video</h3>
+      </div>
+      <div class="how-step">
+        <div class="step-num">04</div>
+        <h3>Alertas y coordinación táctica</h3>
+      </div>
+      <div class="how-step">
+        <div class="step-num">05</div>
+        <h3>Auditoría y reportes</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="seguridad" class="section-pad">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-6" data-animate>
+        <h2 class="section-title">Seguridad &amp; cumplimiento</h2>
+        <p class="text-muted">Diseñado para entornos críticos con trazabilidad, control y hardening desde el primer día.</p>
+      </div>
+      <div class="col-lg-6" data-animate>
+        <div class="security-card">
+          <ul class="list-unstyled dronex-list">
+            <li>Role-based access (Admin/Pilot)</li>
+            <li>Tokens para agentes</li>
+            <li>Registro de eventos (audit log)</li>
+            <li>Enfoque “secure by design”</li>
+            <li>Preparación para ISO 27001 / NIST</li>
+            <li>Hardening y despliegue on-prem o cloud</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="features" class="section-pad">
+  <div class="container">
+    <h2 class="section-title">Módulos / Features</h2>
+    <div class="row g-4 mt-2">
+      <div class="col-md-6 col-lg-4" data-animate>
+        <div class="feature-card">Fleet Management</div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-animate>
+        <div class="feature-card">Shifts &amp; Routes</div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-animate>
+        <div class="feature-card">Live Operations</div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-animate>
+        <div class="feature-card">Alerts Center</div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-animate>
+        <div class="feature-card">Audit Trail</div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-animate>
+        <div class="feature-card">Integrations (Agent API)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="planes" class="section-pad">
+  <div class="container">
+    <h2 class="section-title">Planes / Modelos</h2>
+    <div class="table-responsive mt-4" data-animate>
+      <table class="table table-dark table-borderless dronex-table">
+        <thead>
+          <tr>
+            <th>Modelo</th>
+            <th>Alcance</th>
+            <th>Seguridad</th>
+            <th>Integraciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Pilot Program</td>
+            <td>Prueba controlada, despliegue en fases, onboarding guiado.</td>
+            <td>RBAC, logging básico, soporte dedicado.</td>
+            <td>Integración inicial con flota actual.</td>
+          </tr>
+          <tr>
+            <td>Enterprise</td>
+            <td>Multi-sede, alta disponibilidad, continuidad operativa.</td>
+            <td>Audit-ready, hardening avanzado.</td>
+            <td>Conectores con sistemas de seguridad.</td>
+          </tr>
+          <tr>
+            <td>Government</td>
+            <td>On-prem, compliance extendido, control soberano.</td>
+            <td>Políticas, segregación y revisiones periódicas.</td>
+            <td>Integraciones a medida.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="section-pad">
+  <div class="container">
+    <h2 class="section-title">FAQ</h2>
+    <div class="accordion dronex-accordion mt-4" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+            ¿Funciona con drones comerciales?
+          </button>
+        </h2>
+        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">Sí. DRONEX integra drones comerciales vía conectores o con un agente si es una flota propia.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+            ¿Requiere internet?
+          </button>
+        </h2>
+        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">Puede desplegarse on-prem con conectividad local, sin depender de internet pública.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+            ¿Cómo se maneja el video?
+          </button>
+        </h2>
+        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">Streaming RTSP/WebRTC según despliegue, con controles de seguridad y retención.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+            ¿Se puede integrar con sistemas existentes?
+          </button>
+        </h2>
+        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">Sí, contemplamos integración futura con SIEM, CAD, GIS y sistemas de gestión.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+            ¿Qué tan rápido se despliega?
+          </button>
+        </h2>
+        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">El despliegue es por fases: diagnóstico, integración y habilitación operativa.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="section-pad">
+  <div class="container">
+    <div class="row g-4 align-items-start">
+      <div class="col-lg-5" data-animate>
+        <h2 class="section-title">CTA final + contacto</h2>
+        <p class="text-muted">Solicita una demo guiada y recibe una propuesta adaptada a tu operación.</p>
+        <div class="contact-callout">
+          <p class="mb-1">Respuesta prioritaria para entidades críticas.</p>
+          <p class="mb-0">Operación segura · Entregas por fases · Soporte especializado</p>
+        </div>
+      </div>
+      <div class="col-lg-7" data-animate>
+        <form method="post" action="{% url 'marketing:contact_submit' %}" class="contact-form">
+          {% csrf_token %}
+          {% if form.errors %}
+            <div class="alert alert-danger">
+              Corrige los campos marcados para continuar.
+            </div>
+          {% endif %}
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Nombre</label>
+              {{ form.name }}
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Organización</label>
+              {{ form.org }}
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Email</label>
+              {{ form.email }}
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Teléfono</label>
+              {{ form.phone }}
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">País</label>
+              {{ form.country }}
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Caso de uso</label>
+              {{ form.use_case }}
+            </div>
+            <div class="col-12">
+              <label class="form-label">Mensaje</label>
+              {{ form.message }}
+            </div>
+            <div class="col-12 d-flex align-items-center gap-2">
+              <input class="form-check-input" type="checkbox" required />
+              <label class="form-check-label">Acepto política</label>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary btn-lg w-100 dronex-btn">Enviar solicitud</button>
+            </div>
+            <div class="col-12 small text-muted">No compartimos tu información con terceros.</div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('[data-animate]').forEach((el) => observer.observe(el));
+</script>
+{% endblock %}
