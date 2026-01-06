@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% block title %}DRONEX — Unified Drone Command Center{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'vendor/bootstrap/bootstrap.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/dronex_marketing.css' %}" />
+  {% block extra_head %}{% endblock %}
+</head>
+<body class="dronex-body">
+  <div class="hud-grid"></div>
+  <div class="scanlines"></div>
+  <div class="noise-layer"></div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark dronex-nav">
+    <div class="container">
+      <a class="navbar-brand dronex-brand" href="#hero">DRONEX</a>
+      <div class="d-flex align-items-center gap-3 order-lg-2">
+        <span class="dronex-badge-status">SECURE LINK: ACTIVE</span>
+        <span class="dronex-clock" id="dronexClock">00:00:00</span>
+        <a class="btn btn-sm btn-outline-info dronex-cta" href="#contact">Request Demo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dronexNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="dronexNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#solution">Solution</a></li>
+          <li class="nav-item"><a class="nav-link" href="#capabilities">Capabilities</a></li>
+          <li class="nav-item"><a class="nav-link" href="#use-cases">Use Cases</a></li>
+          <li class="nav-item"><a class="nav-link" href="#security">Security</a></li>
+          <li class="nav-item"><a class="nav-link" href="#deployment">Deployment</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  {% if messages %}
+    <div class="container mt-3">
+      {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} mb-2">{{ message }}</div>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="dronex-footer py-5">
+    <div class="container d-flex flex-column flex-md-row justify-content-between gap-3">
+      <div>
+        <div class="footer-title">DRONEX</div>
+        <div class="small text-muted">Unified Drone Command Center</div>
+      </div>
+      <div class="footer-links small">
+        <a href="#" class="me-3">Terms</a>
+        <a href="#" class="me-3">Privacy</a>
+        <span>Unauthorized use prohibited.</span>
+      </div>
+      <div class="small text-muted">© DRONEX. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="{% static 'vendor/bootstrap/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'js/marketing.js' %}"></script>
+  {% block extra_scripts %}{% endblock %}
+</body>
+</html>
